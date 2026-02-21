@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nipponsei-日本製 - Japanese Cosmetics</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="spinner-overlay" id="spinner">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" id="homeBtn">
+                    <h1>Nipponsei-日本製<span>.</span></h1>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#" class="active" id="homeLink">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu" id="categoryDropdown"></div>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header-icons">
+                    <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn"><i class="far fa-user"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>PROTECT YOUR SKIN WITH OUR VITAL SUNSCREEN</h2>
+                <p>Free Shipping on Orders Over 1200 BDT</p>
+            </div>
+        </section>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="layout">
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <h3>Categories</h3>
+                            <ul class="category-list" id="categoryList"></ul>
+                        </div>
+                        
+                        <div class="sidebar-widget">
+                            <h3>Brands</h3>
+                            <div class="brand-list" id="brandList"></div>
+                        </div>
+                    </aside>
+
+                    <!-- Products Area -->
+                    <div class="products-area">
+                        <div class="section-header">
+                            <h2 id="sectionTitle">✨ Restocked Recently</h2>
+                        </div>
+                        
+                        <div class="products-grid" id="productsGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brands Slider -->
+        <section class="brands-slider">
+            <div class="container">
+                <h2 class="section-title">Trusted Brands</h2>
+                <div class="brands-container" id="brandsContainer"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Nipponsei-日本製<span>.</span></h4>
+                    <p>Your trusted source for authentic Japanese cosmetics in Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>Dhaka-1216</p>
+                    <p><i class="fas fa-envelope"></i> info@Nipponsei.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 @Nipponsei-日本製. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Trigger (Secret) -->
+    <div class="admin-trigger" id="adminTrigger"></div>
+
+    <!-- Modals -->
+    
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeLogin">&times;</span>
+            <h3>Admin Login</h3>
+            <input type="password" id="adminPass" placeholder="Enter Password">
+            <button class="modal-btn" id="loginBtn">Login</button>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="modal" id="adminPanel">
+        <div class="modal-content admin-panel">
+            <span class="modal-close" id="closeAdmin">&times;</span>
+            <h3>📸 Upload Image</h3>
+            
+            <div class="upload-form">
+                <select id="productSelect" class="product-select"></select>
+                <input type="file" id="imageFile" accept="image/*">
+                <button class="upload-btn" id="uploadBtn">Upload</button>
+                <div id="uploadMsg" class="upload-msg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeProduct">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal" id="searchModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeSearch">&times;</span>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
