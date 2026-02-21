@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     loginBtn.addEventListener('click', () => {
-        if (adminPass.value === 'shinrin@2024') {
+        if (adminPass.value === 'abir230161') {
             loginModal.style.display = 'none';
             adminPanel.style.display = 'flex';
         } else {
@@ -489,4 +489,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === loginModal) loginModal.style.display = 'none';
         if (e.target === adminPanel) adminPanel.style.display = 'none';
     });
+
 });
